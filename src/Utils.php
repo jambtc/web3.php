@@ -386,7 +386,9 @@ class Utils
      */
     public static function fromWei($number, $unit)
     {
-        $bn = self::toBn($number);
+        // $bn = self::toBn($number);
+        // sergio casizzone modifica 2020.08.05
+        $bn = self::toBn((string) $number);
 
         if (!is_string($unit)) {
             throw new InvalidArgumentException('fromWei unit must be string.');
